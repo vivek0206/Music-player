@@ -23,14 +23,16 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     ListView songList;
     String[] items;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         songList=(ListView)findViewById(R.id.songListView);
-        runtimePermisssion();
+        runtimePermisssion();		//first permit it
 
     }
+
     public void runtimePermisssion(){
         Dexter.withActivity(this)
                 .withPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }).check();
     }
+
     public ArrayList<File> findsong(File file){
         ArrayList<File>arrayList=new ArrayList<>();
         File[] files=file.listFiles();
@@ -66,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return arrayList;
     }
+
     void display(){
         final ArrayList<File> mysong=findsong(Environment.getExternalStorageDirectory());
         items=new String[mysong.size()];
