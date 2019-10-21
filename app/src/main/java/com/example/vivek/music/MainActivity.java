@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
                 }).check();
     }
 
+
+    // Finds all mp3 and wav format files and add to list.
     public ArrayList<File> findsong(File file){
         ArrayList<File>arrayList=new ArrayList<>();
         File[] files=file.listFiles();
