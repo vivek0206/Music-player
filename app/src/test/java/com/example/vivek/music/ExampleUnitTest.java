@@ -9,9 +9,13 @@ import static org.junit.Assert.*;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
+
+
 public class ExampleUnitTest {
-    @Test
+    @Testing//Use annotation test and chck for the correct addition of numbers
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
     }
+
+
 }

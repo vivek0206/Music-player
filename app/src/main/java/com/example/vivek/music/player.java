@@ -85,6 +85,7 @@ public class player extends AppCompatActivity {
                 mediaPlayer.seekTo(seekBar.getProgress());
             }
         });
+        // Used to pause song.
         pause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,6 +100,7 @@ public class player extends AppCompatActivity {
                 }
             }
         });
+        // Used to play the next song.
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,7 +114,7 @@ public class player extends AppCompatActivity {
                 mediaPlayer.start();
             }
         });
-
+        // Used to play the previous song.
         pre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
